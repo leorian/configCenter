@@ -1,4 +1,4 @@
-<%@ page isELIgnored="false" %>
+<%@ page isELIgnored="false" contentType="text/html; UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,5 +6,7 @@
     <title>sprint hello</title>
 </head>
 <body>hello ${spring}!
+<br/>
+${message}
 </body>
 </html>
