@@ -35,4 +35,13 @@ public class HelloController {
        return JSON.toJSONString(worldMap);
    }
 
+   @ResponseBody
+   @RequestMapping("/map")
+   public Map<String, String> map() {
+       Map<String, String> worldMap = new HashMap<String, String>();
+       worldMap.put("key1","value1");
+       worldMap.put("key2", "value2");
+       return worldMap;
+   }
+
 }
