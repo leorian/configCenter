@@ -11,12 +11,19 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 测试类
+ *
+ */
 @Controller
 public class HelloController {
 
     @Autowired
     private HelloService helloService;
 
+    /**
+     * 整合JSP/Thymeleaf/Freemarker
+     * */
    @RequestMapping("/hello")
    public ModelAndView hello(){
      ModelAndView mv =new ModelAndView();
@@ -26,6 +33,11 @@ public class HelloController {
      return mv;
    }
 
+    /**
+     * Spring自带
+     *
+     * @return
+     */
    @ResponseBody
    @RequestMapping("/world")
    public String world() {
@@ -35,6 +47,10 @@ public class HelloController {
        return JSON.toJSONString(worldMap);
    }
 
+    /**
+     * 借助于Jackson框架
+     * @return
+     */
    @ResponseBody
    @RequestMapping("/map")
    public Map<String, String> map() {
