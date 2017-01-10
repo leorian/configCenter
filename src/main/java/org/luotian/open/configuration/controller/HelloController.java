@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 测试类
+ * 测试类controller
  *
  */
 @Controller
