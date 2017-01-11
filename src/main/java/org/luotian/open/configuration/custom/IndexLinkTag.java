@@ -15,10 +15,10 @@ import freemarker.template.TemplateDirectiveModel;
 import freemarker.template.TemplateException;
 import freemarker.template.TemplateModel;
 
-@Component("indexLinkTag")
+//@Component("indexLinkTag")
 public class IndexLinkTag implements TemplateDirectiveModel {
 
-    @Autowired
+//    @Autowired
     private FreeMarkerConfigurer freeMarkerConfigurer;
      /*
      *@param env 系统环境变量，通常用它来输出相关内容，如Writer out = env.getOut();
