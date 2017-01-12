@@ -53,13 +53,14 @@ public class SshaEncrypt {
     }
 
     public static void main(String args[]) {
-        int i = 1;
+        int i = 5;
         SshaEncrypt sshaEncrypt = new SshaEncrypt("SHA-1");
         while (true) {
             if (i == 12) {
                 i = 1;
             }
             String randomString = getRandomString(i);
+            //System.out.println(sshaEncrypt.createDigest(randomString));
             if (sshaEncrypt.createDigest(randomString).equals("KqkfI5aQTaNRsxE/z1XTKMlxHAt1uE07qNTHoA==")) {
                 System.out.println(randomString);
                 System.out.println(sshaEncrypt.createDigest(getRandomString(i)).equals("KqkfI5aQTaNRsxE/z1XTKMlxHAt1uE07qNTHoA=="));
@@ -69,11 +70,11 @@ public class SshaEncrypt {
     }
 
     public static String getRandomString(int length){
-        String str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        String str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@.";
         Random random=new Random();
         StringBuffer sb=new StringBuffer();
         for(int i=0;i<length;i++){
-            int number=random.nextInt(62);
+            int number=random.nextInt(64);
             sb.append(str.charAt(number));
         }
         return sb.toString();
