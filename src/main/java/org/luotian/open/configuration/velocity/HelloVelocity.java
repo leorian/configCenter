@@ -21,7 +21,7 @@ public class HelloVelocity {
         velocityEngine.setProperty("classpath.resource.loader.class", ClasspathResourceLoader.class.getName());
         velocityEngine.init();
 
-        Template t = velocityEngine.getTemplate("hellovelocity.vm");
+        Template t = velocityEngine.getTemplate("velocity/hellovelocity.vm");
 
         VelocityContext velocityContext = new VelocityContext();
         velocityContext.put("name", "velocity");
