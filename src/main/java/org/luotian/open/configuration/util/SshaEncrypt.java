@@ -1,8 +1,10 @@
 package org.luotian.open.configuration.util;
 
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;  
-  
+import java.security.NoSuchAlgorithmException;
+import java.util.Random;
+import java.util.RandomAccess;
+
 import sun.misc.BASE64Encoder;  
   
 public class SshaEncrypt {  
@@ -51,7 +53,29 @@ public class SshaEncrypt {
     }
 
     public static void main(String args[]) {
+        int i = 1;
         SshaEncrypt sshaEncrypt = new SshaEncrypt("SHA-1");
-        System.out.println(sshaEncrypt.createDigest("317hu@2016"));
+        while (true) {
+            if (i == 12) {
+                i = 1;
+            }
+            String randomString = getRandomString(i);
+            if (sshaEncrypt.createDigest(randomString).equals("KqkfI5aQTaNRsxE/z1XTKMlxHAt1uE07qNTHoA==")) {
+                System.out.println(randomString);
+                System.out.println(sshaEncrypt.createDigest(getRandomString(i)).equals("KqkfI5aQTaNRsxE/z1XTKMlxHAt1uE07qNTHoA=="));
+            }
+            i++;
+        }
+    }
+
+    public static String getRandomString(int length){
+        String str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        Random random=new Random();
+        StringBuffer sb=new StringBuffer();
+        for(int i=0;i<length;i++){
+            int number=random.nextInt(62);
+            sb.append(str.charAt(number));
+        }
+        return sb.toString();
     }
 }  
