@@ -22,6 +22,12 @@
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location" value="classpath:jdbc.properties" />
     </bean>
+    <!--<bean id="propertyConfigurer" class="com.bozhong.config.common.ConfigSetPropertyHolder">-->
+        <!--<property name="appConfigurationLoadHelper" ref="appConfigurationLoadHelper"/>-->
+    <!--</bean>-->
+    <!--<bean id="appConfigurationLoadHelper" class="com.bozhong.config.common.AppConfigurationLoadHelper">-->
+        <!--<property name="appId" value="1"/>-->
+    <!--</bean>-->
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">

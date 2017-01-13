@@ -225,6 +225,12 @@
       <scope>compile</scope>
     </dependency>
 
+    <!--<dependency>-->
+      <!--<groupId>com.bozhong</groupId>-->
+      <!--<artifactId>configCenter-client</artifactId>-->
+      <!--<version>1.0.0</version>-->
+    <!--</dependency>-->
+
   </dependencies>
   <build>
     <finalName>config-center</finalName>
