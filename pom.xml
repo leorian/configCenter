@@ -22,7 +22,7 @@
       <artifactId>junit</artifactId>
       <!--<version>3.8.1</version>-->
       <version>4.11</version>
-      <scope>test</scope>
+      <!--<scope>test</scope>-->
     </dependency>
     <!-- spring核心包 -->
     <!-- 1)spring核心依赖 -->
@@ -235,6 +235,27 @@
       <groupId>org.quartz-scheduler</groupId>
       <artifactId>quartz</artifactId>
       <version>2.2.1</version>
+    </dependency>
+
+    <!-- Needed for PDF View -->
+    <!--<dependency>-->
+      <!--<groupId>com.lowagie</groupId>-->
+      <!--<artifactId>itext</artifactId>-->
+      <!--<version>4.2.1</version>-->
+    <!--</dependency>-->
+
+    <dependency>
+      <groupId>com.lowagie</groupId>
+      <artifactId>itext</artifactId>
+      <version>2.1.7</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <!-- Needed for XLS View -->
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>3.10-beta2</version>
     </dependency>
 
   </dependencies>
